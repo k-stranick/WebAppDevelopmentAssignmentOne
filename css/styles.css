@@ -1,0 +1,38 @@
+body{
+    /*make the background gradient so it transitions between blue and steelblue*/
+    background: linear-gradient(blue, steelblue);
+
+    /*ensures the body covers the full height of the browser window*/
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*html classes are defined using a period  */
+.container{ 
+    width:70%;
+    max-width:800px; /*can't be bigger than 800px*/
+    margin:auto; /*will center container*/
+}
+
+/*target the h1 tag inside the div with the class name of container*/
+.container h1{
+    color:white;
+}
+
+/*container images will be a 100% width of outer element in this 
+   case the container width*/
+.container img{
+    width:100%;
+    border:2px solid #ccc;
+}
+.container a{
+    color:white;
+}
+
+
+/*when the browser width is less than 800px than change the container width*/
+@media screen and (max-width:800px) {
+    .container{
+        width:90%;
+    }
+}
