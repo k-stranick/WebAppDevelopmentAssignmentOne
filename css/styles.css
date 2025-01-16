@@ -1,38 +1,62 @@
-body{
+body {
     /*make the background gradient so it transitions between blue and steelblue*/
-    background: linear-gradient(blue, steelblue);
+    background: linear-gradient(white, steelblue);
 
     /*ensures the body covers the full height of the browser window*/
     background-size: cover;
     background-attachment: fixed;
+    background-image:"";
 }
 
 /*html classes are defined using a period  */
-.container{ 
-    width:70%;
-    max-width:800px; /*can't be bigger than 800px*/
-    margin:auto; /*will center container*/
+.container {
+    width: 70%;
+    max-width: 800px;
+    /*can't be bigger than 800px*/
+    margin: auto;
+    /*will center container*/
 }
 
 /*target the h1 tag inside the div with the class name of container*/
-.container h1{
-    color:white;
+.container h1 {
+    color: black;
+    text-align: center;
 }
 
 /*container images will be a 100% width of outer element in this 
    case the container width*/
-.container img{
-    width:100%;
-    border:2px solid #ccc;
+.container img {
+    width: 100%;
+    border: 2px solid #ccc;
 }
-.container a{
-    color:white;
+
+.container a {
+    
+    color: black;
+   
+
 }
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+}
+
+/*add music and slow fade in for hideo*/
+/*click a box thatwill reveal image? more JS than anythign else*/
 
 
 /*when the browser width is less than 800px than change the container width*/
 @media screen and (max-width:800px) {
-    .container{
-        width:90%;
+    .container {
+        width: 90%;
+    }
+}
+
+/* when the browsr is less than 1024px then change the container width to 80%*/
+@media screen and (max-width:1024px) {
+    .container {
+        width: 80%;
     }
 }
