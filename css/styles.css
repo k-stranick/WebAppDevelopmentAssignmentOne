@@ -1,11 +1,39 @@
+html,
 body {
-    /*make the background gradient so it transitions between blue and steelblue*/
-    background: linear-gradient(white, steelblue);
+    height: 100%;
+    margin: 0;
+}
 
-    /*ensures the body covers the full height of the browser window*/
+.navbar {
+    height: 50px;
+    /* Adjust as needed */
+    line-height: 50px;
+    /* Align text vertically */
+}
+
+/*sets the backgound for the home page*/
+body.home-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Ensure body takes at least the full viewport height */
+
+    background: url("../images/hideokojima.jpg") no-repeat center center;
     background-size: cover;
-    background-attachment: fixed;
-    background-image:"";
+    /* background-attachment: fixed;*/
+
+    /* Ensure the background image covers the entire viewport */
+}
+
+/*sets the backgound for the info page*/
+body.info-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Ensure body takes at least the full viewport height */
+    background: url("../images/kojimaproductions.jpg") no-repeat center center;
+    background-size: cover;
+    /* Ensure the background image covers the entire viewport */
 }
 
 /*html classes are defined using a period  */
@@ -15,12 +43,13 @@ body {
     /*can't be bigger than 800px*/
     margin: auto;
     /*will center container*/
+    flex: 1;
+    /* Allow the container to grow and take available space */
 }
 
 /*target the h1 tag inside the div with the class name of container*/
 .container h1 {
     color: black;
-    text-align: center;
 }
 
 /*container images will be a 100% width of outer element in this 
@@ -30,10 +59,8 @@ body {
     border: 2px solid #ccc;
 }
 
-.container a {
-    color: black;
-   
-
+p.info-text {
+    color: white;
 }
 
 .footer {
