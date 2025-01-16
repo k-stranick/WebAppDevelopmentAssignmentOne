@@ -17,7 +17,6 @@ body.home-page {
     flex-direction: column;
     min-height: 100vh;
     /* Ensure body takes at least the full viewport height */
-
     background: url("../images/hideokojima.jpg") no-repeat center center;
     background-size: cover;
     /* background-attachment: fixed;*/
@@ -43,7 +42,7 @@ body.info-page {
     /*can't be bigger than 800px*/
     margin: auto;
     /*will center container*/
-    flex: 1;
+    flex: 1 0 auto;
     /* Allow the container to grow and take available space */
 }
 
@@ -67,6 +66,8 @@ p.info-text {
     text-align: center;
     padding: 10px;
     background-color: #f8f9fa;
+    flex-shrink: 0; 
+    /* Ensure the footer does not shrink */
 }
 
 /*add music and slow fade in for hideo*/
