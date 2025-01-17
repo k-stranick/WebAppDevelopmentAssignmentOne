@@ -4,12 +4,6 @@ body {
     margin: 0;
 }
 
-.navbar {
-    height: 50px;
-    /* Adjust as needed */
-    line-height: 50px;
-    /* Align text vertically */
-}
 
 /*sets the backgound for the home page*/
 body.home-page {
