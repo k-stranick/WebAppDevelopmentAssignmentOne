@@ -1,9 +1,30 @@
+/*
+Kyle Stranick
+ITN 263-601 Mobile App Development
+Spring 2025
+Assignment 1: Designing a Website
+Due: 1/19/2025
+*/
+
+/* 
+  Ensure the html and body elements take up the full height of the viewport 
+  and remove default margin to prevent unwanted spacing around the edges.
+  This is useful for creating full-height layouts and ensuring consistent spacing.
+*/
 html,
 body {
     height: 100%;
     margin: 0;
 }
 
+.navbar {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+    padding: 10px 0;
+    /* Add padding above and below the navbar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    /* Add a subtle shadow */
+}
 
 /*sets the backgound for the home page*/
 body.home-page {
@@ -26,7 +47,7 @@ body.info-page {
     min-height: 100vh;
     /* Ensure body takes at least the full viewport height */
     background: linear-gradient(rgba(0, 0, 0, 0.3),
-            rgba(0, 0, 0, 0.3)), url("../images/kojimaproductions.jpg") no-repeat center center;
+            rgba(0, 0, 0, 0.6)), url("../images/kojimaproductions.jpg") no-repeat center center;
     /* Add a semi-transparent overlay on top of the background image */
     background-size: cover;
     /* Ensure the background image covers the entire viewport */
@@ -37,17 +58,18 @@ body.info-page {
 
 body.info-page .container {
     background-color: rgba(0, 0, 0, 0.6);
-}
+    
+} 
 
-.navbar {
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Semi-transparent background */
-    padding: 10px 0;
-    /* Add padding above and below the navbar */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    /* Add a subtle shadow */
+p.info-text {
+    color: whitesmoke;
+    padding: 10px;
+    /* Add spacing around the text */
+    border-radius: 4px;
+    /* Slightly rounded corners */
+    text-shadow: 2px 2px 3px #000;
+    /*Add a text shadow for contrast */
 }
-
 /*html classes are defined using a period  */
 .container {
     width: 70%;
@@ -69,25 +91,16 @@ body.info-page .container {
    case the container width*/
 .container img {
     width: 100%;
-    border: 2px solid #ccc;
+    border: 2px solid whitesmoke;
 }
 
-p.info-text {
+.list-group {
+    /* background-color: rgba(0, 0, 0, 0.6); */
     color: whitesmoke;
-    padding: 10px;
-    /* Add spacing around the text */
-    border-radius: 4px;
-    /* Slightly rounded corners */
-    text-shadow: 2px 2px 3px #000;
-    /*Add a text shadow for contrast */
-}
-
-.footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #f8f9fa;
-    flex-shrink: 0;
-    /* Ensure the footer does not shrink */
+    margin-bottom: 10px;
+    /* Add spacing between list items */
+    margin-left: 40px;
+    /* Add left margin to list items */
 }
 
 a.btn.btn-info {
@@ -110,6 +123,18 @@ a.btn.btn-info:hover {
     color: whitesmoke;
     transform: translateY(-2px);
     /* Slight lift on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #343a40;
+    color: white;
+    border-top: 1px solid #444;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    flex-shrink: 0;
 }
 
 /* Apply the fade-in animation to elements */

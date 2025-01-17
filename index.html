@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!--
+Kyle Stranick
+ITN 263-601 Mobile App Development
+Spring 2025
+Assignment 1: Designing a Website
+Due: 1/19/2025
+-->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,7 +31,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
@@ -37,19 +43,18 @@
         </div>
     </nav>
 
-    <div class="container text-center fade-in">
+    <main class="container text-center fade-in">
         <h1>Hideo Kojima</h1>
-    </div>
+        <!-- Auto Play Best Is Yet To Come MGS1-->
+        <div>
+            <audio id="hiddenAudio" autoplay loop>
+                <source src="music/thebestisyettocome.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </main>
 
-    <!-- Auto Play Best Is Yet To Come MGS1-->
-    <div>
-        <audio id="hiddenAudio" autoplay loop>
-            <source src="music/thebestisyettocome.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-    </div>
-
-    <footer class="bg-dark text-white py-3 text-center">
+    <footer class="text-white py-3 text-center">
         <p>&copy; Kyle Stranick ITN 263-601 Mobile App Development Spring 2025</p>
     </footer>
 
