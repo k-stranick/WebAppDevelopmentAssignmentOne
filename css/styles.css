@@ -11,11 +11,12 @@ body.home-page {
     flex-direction: column;
     min-height: 100vh;
     /* Ensure body takes at least the full viewport height */
-    background: url("../images/hideokojima.jpg") no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4)), url("../images/hideokojima.jpg") no-repeat center center;
+    /* Add a semi-transparent overlay on top of the background image */
     background-size: cover;
-    /* background-attachment: fixed;*/
-
     /* Ensure the background image covers the entire viewport */
+    background-attachment: fixed;
 }
 
 /*sets the backgound for the info page*/
@@ -24,9 +25,27 @@ body.info-page {
     flex-direction: column;
     min-height: 100vh;
     /* Ensure body takes at least the full viewport height */
-    background: url("../images/kojimaproductions.jpg") no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)), url("../images/kojimaproductions.jpg") no-repeat center center;
+    /* Add a semi-transparent overlay on top of the background image */
     background-size: cover;
     /* Ensure the background image covers the entire viewport */
+    background-attachment: fixed;
+    /* Ensures background image scrolls */
+
+}
+
+body.info-page .container {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+    padding: 10px 0;
+    /* Add padding above and below the navbar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    /* Add a subtle shadow */
 }
 
 /*html classes are defined using a period  */
@@ -36,13 +55,14 @@ body.info-page {
     /*can't be bigger than 800px*/
     margin: auto;
     /*will center container*/
-    flex: 1 0 auto;
     /* Allow the container to grow and take available space */
 }
 
 /*target the h1 tag inside the div with the class name of container*/
 .container h1 {
-    color: black;
+    color: whitesmoke;
+    text-align: center;
+    text-shadow: 2px 2px 3px #000;
 }
 
 /*container images will be a 100% width of outer element in this 
@@ -53,20 +73,65 @@ body.info-page {
 }
 
 p.info-text {
-    color: white;
+    color: whitesmoke;
+    padding: 10px;
+    /* Add spacing around the text */
+    border-radius: 4px;
+    /* Slightly rounded corners */
+    text-shadow: 2px 2px 3px #000;
+    /*Add a text shadow for contrast */
 }
 
 .footer {
     text-align: center;
     padding: 10px;
     background-color: #f8f9fa;
-    flex-shrink: 0; 
+    flex-shrink: 0;
     /* Ensure the footer does not shrink */
 }
 
-/*add music and slow fade in for hideo*/
-/*click a box thatwill reveal image? more JS than anythign else*/
+a.btn.btn-info {
+    width: 86px;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: whitesmoke;
+    color: black;
+    text-align: center;
+    border: whitesmoke 1px solid;
+    /*adds a border to the button*/
+    border-radius: 5px;
+    /*adds a border radius to the button*/
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    /* Smooth transitions */
+}
 
+a.btn.btn-info:hover {
+    background-color: black;
+    color: whitesmoke;
+    transform: translateY(-2px);
+    /* Slight lift on hover */
+}
+
+/* Apply the fade-in animation to elements */
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Hide the audio player */
+audio {
+    display: none;
+}
+
+/* Define the fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
 
 /*when the browser width is less than 800px than change the container width*/
 @media screen and (max-width:800px) {
